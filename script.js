@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     loadTasks();
-    checkTaskList(); // ตรวจสอบสถานะของกรอบ
+    checkTaskList();
 });
 
 function addTask() {
@@ -19,7 +19,7 @@ function addTask() {
         deleteBtn.onclick = function () {
             li.remove();
             deleteTask(taskText);
-            checkTaskList(); // ตรวจสอบว่าเหลืองานไหม
+            checkTaskList(); 
         };
 
         li.appendChild(deleteBtn);
@@ -27,7 +27,7 @@ function addTask() {
         saveTask(taskText);
         taskInput.value = "";
 
-        taskContainer.style.display = "block"; // แสดงกล่องเมื่อมีงาน
+        taskContainer.style.display = "block"; 
     }
 }
 
@@ -36,9 +36,9 @@ function checkTaskList() {
     let taskContainer = document.getElementById("taskContainer");
 
     if (taskList.children.length === 0) {
-        taskContainer.style.display = "none"; // ซ่อนกล่องถ้าไม่มีงาน
+        taskContainer.style.display = "none"; 
     } else {
-        taskContainer.style.display = "block"; // แสดงกล่องถ้ามีงาน
+        taskContainer.style.display = "block"; 
     }
 }
 
@@ -62,14 +62,14 @@ function loadTasks() {
         deleteBtn.onclick = function () {
             li.remove();
             deleteTask(task);
-            checkTaskList(); // ตรวจสอบว่าเหลืองานไหม
+            checkTaskList();
         };
 
         li.appendChild(deleteBtn);
         taskList.appendChild(li);
     });
 
-    checkTaskList(); // ตรวจสอบสถานะของกรอบหลังโหลด
+    checkTaskList(); 
 }
 
 function deleteTask(task) {
