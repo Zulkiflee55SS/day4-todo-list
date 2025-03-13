@@ -9,17 +9,23 @@
 </head>
 
 <body>
-
-    <div class="btn">
-        <h1>รายการสิ่งที่ต้องทําของฉัน</h1>
+    <header>
+        <h1>list รายการ You</h1>
+    </header>
+    <div class="container">
+        <h1> รายการสิ่งที่ต้องทำ 📌</h1>
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="พิมพ์งานที่ต้องทำ...">
+            <button onclick="addTask()">เพิ่มงาน</button>
+        </div>
+    </div>
+    <div class="container55" id="taskContainer" style="display: none;">
+        <h2 id="taskHeader" style="text-align: center;">สิ่งที่ต้องทำ</h2>
+        <ul id="taskList"></ul>
     </div>
 
-    <input type="text" id="taskInput" placeholder="พิมพ์งานที่ต้องทำ...">
-    <button onclick="addTask()">เพิ่มงาน</button>
 
-    <ul id="taskList"></ul>
+
 
     <script src="script.js"></script>
-</body>
-
-</html>
+</body
